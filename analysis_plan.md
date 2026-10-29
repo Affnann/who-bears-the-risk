@@ -84,7 +84,7 @@ These were added between the plan (17:12 UTC) and the commit of the code (17:44 
 - two extra rows in the period table: FY2018 to FY2020 together, with approximate troops, and all years with official troop counts, for each country;
 - descriptive totals and comparisons: the death counts for FY2009 to FY2021 (`table_cumulative.csv`) and the comparisons with earlier figures in Section 6.8 of the paper.
 
-The code commit shows an author time of 17:44 UTC and a commit time of 18:15 UTC, because it was amended at 18:15 to stop tracking a large downloaded input and the paper drafts (`.gitignore`); the amendment did not change the code.
+The code commit shows an author time of 17:44 UTC and a commit time of 18:15 UTC, because it was amended at 18:15 to stop tracking a large downloaded input and to keep the paper drafts, which had never been committed, out of the repository (`.gitignore`); the amendment did not change the code.
 
 ### After results were seen
 

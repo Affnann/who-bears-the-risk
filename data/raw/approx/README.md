@@ -6,11 +6,11 @@ How the columns were set:
 
 - When one quoted figure covers a quarter, the central value is that figure.
 - When a quarter spans a change between two quoted figures, the central value is their midpoint.
-- When versions describe the same level with different figures, the central value is their midpoint. The versions of 5 March, 3 April, 1 May, 1 June and 3 August 2018 put the level reached after the reinforcements ordered in September 2017 at "around 15,000"; their footnote (note 67 in the 5 March 2018 version) gives 15,298 active-duty and reserve troops on 30 September 2017, from the Defense Manpower Data Center. The versions from 10 September 2018 on put the same level at "around 14,000", with the same footnote. Every FY2018 quarter is therefore set to 14,500.
+- When versions describe the same level with different figures, the central value is their midpoint. The versions of 5 March, 3 April, 1 May, 1 June and 3 August 2018 put the level reached after the reinforcements ordered in September 2017 at "around 15,000"; their footnote (note 67 in the 5 March 2018 version) gives 15,298 active-duty and reserve troops on 30 September 2017, from the Defense Manpower Data Center. The versions of 10 September 2018 to 1 August 2019 put the same level at "around 14,000", with the same footnote. Every FY2018 quarter is therefore set to 14,500.
 - For FY2019 the versions keep repeating "around 14,000", but the 1 November 2019 version reports that troops had been "gradually reduced by 2,000 over the past year, to between 12,000 and 13,000" by October 2019. The FY2019 central values follow a steady reduction from about 14,500 to about 12,500.
 - The low and high columns bracket the quoted figures.
 
-All these figures use the accounting adopted in August 2017, which counts personnel on short missions and temporary duty (CRS R44116, Table 1, note b).
+All these figures date from after August 2017, when the Defense Department began to count personnel on short-duration missions and in a temporary duty status in its totals for Afghanistan (CRS R44116, Table 1, note b). The R45122 versions do not say how each figure was counted, and the 15,298 is a separate personnel count by the Defense Manpower Data Center.
 
 These values are used only in the separate FY2018-FY2020 extension, never in the main tests. FY2021 is not given, because troop levels changed within months during the withdrawal.
 
