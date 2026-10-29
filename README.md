@@ -1,5 +1,7 @@
 # who-bears-the-risk
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23780322.svg)](https://doi.org/10.5281/zenodo.23780322)
+
 Replication package for Kazi Affnann Azom (2026), "Who Bears the Risk of Privatized War? Troops, Contractors and Third-Country Nationals."
 
 The code rebuilds every table and figure in the paper from public sources: the Defense Department's quarterly census of contractor personnel in the USCENTCOM area, U.S. troop levels reported to Congress, the Defense Casualty Analysis System's records of military deaths, and the Labor Department's Defense Base Act death cases.
@@ -65,6 +67,9 @@ The code is released under the MIT License (see `LICENSE`). The derived data in 
 
 ## How to cite
 
-Azom, Kazi Affnann (2026). *who-bears-the-risk: replication package for "Who Bears the Risk of Privatized War?"* [Software]. https://github.com/Affnann/who-bears-the-risk
+Azom, Kazi Affnann (2026). *who-bears-the-risk: replication package for 'Who Bears the Risk of Privatized War?'* (Version v1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.23780323
+
+- This version (v1.0.0): [10.5281/zenodo.23780323](https://doi.org/10.5281/zenodo.23780323)
+- All versions (always points to the latest): [10.5281/zenodo.23780322](https://doi.org/10.5281/zenodo.23780322)
 
 See also `CITATION.cff`.
