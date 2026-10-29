@@ -19,9 +19,14 @@ Every input is downloaded by `code/00_get_data.py`, which records each file's so
 | File | Contents |
 |---|---|
 | `troops_quarterly_crs.csv` | Troop levels and contractor totals by quarter, parsed from CRS R44116 Tables 1 and 3, with a note for each troop figure (Boots on the Ground, force management level, or not available) |
-| `check_crs_vs_census.csv` | The CRS contractor totals compared with the census, quarter by quarter (they match in all 103 quarters both cover) |
+| `check_crs_vs_census.csv` | The CRS contractor totals compared with the census, quarter by quarter (all 95 quarters that both cover match; the CRS tables also have 8 quarters the census does not cover) |
 | `contractors_quarterly.csv` | The census rows used, Afghanistan and Iraq (Iraq and Syria from FY2018 Q2) |
 | `panel_fy.csv` | One row per country and fiscal year, FY2009-FY2021: average contractors by nationality, average troops (official or approximate), military deaths (all and hostile) and Defense Base Act death cases |
+
+## Known problems in the official counts
+
+- **Afghanistan contractors, FY2010.** The census for the fourth quarter of FY2010 says the fall from about 107,000 to 70,599 "is not due to a large reduction in contractor personnel, but rather is due to counting errors (primarily in one specific reporting activity), that have been perpetuated throughout this Fiscal Year". The counts printed for the first three quarters of FY2010 are therefore too high. The main estimates use the printed counts; `output/tables/table_corrections.csv` shows the results with every FY2010 quarter at the recounted level.
+- **Afghanistan troops before August 2017.** In August 2017 the Defense Department began to count personnel on short missions, on temporary duty and in some support units (CRS R44116, Table 1, note b). About 11,000 troops were then present against an official figure of about 8,400 (CRS R45122, March 2018). The figures before the fourth quarter of FY2017 probably leave these personnel out. `table_corrections.csv` adds 2,600 to each earlier quarter, and in a variant scales FY2015 to the third quarter of FY2017 by 11,000 / 8,400.
 
 ## Definitions
 

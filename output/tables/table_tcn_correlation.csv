@@ -1,2 +1,3 @@
 measure,rho,p,n
 "Spearman correlation, TCN share of contractors vs ln troops, FY2009-FY2017",0.03333333333333333,0.9321567355405039,9
+"Spearman correlation, TCN share of troops plus contractors vs ln troops, FY2009-FY2017",-0.41666666666666663,0.26458604674749636,9

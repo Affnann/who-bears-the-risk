@@ -118,42 +118,54 @@ main = p[((p.country == "Afghanistan") & p.fiscal_year.between(2009, 2017)) |
          ((p.country == "Iraq") & p.fiscal_year.between(2009, 2011))].copy()
 
 
-def glm(df, deaths_col="military_deaths", dc_col="contractor_deaths_dba", pc_col="contractors"):
+def glm(df, deaths_col="military_deaths", dc_col="contractor_deaths_dba", pc_col="contractors", iraq=True):
+    """Binomial GLM for contractor deaths out of all deaths, offset ln(P_C/P_M).
+
+    The model is fitted to proportions with the number of deaths as variance weights. (Fitting statsmodels'
+    two-column form with scale="X2" gives a wrong scale, about 0.05 instead of the dispersion; a first version
+    of this script did that.) Quasi-binomial SEs multiply the model SEs by the square root of the dispersion,
+    Pearson chi-squared over residual degrees of freedom, and use the t distribution. statsmodels returns the
+    same robust covariance for HC0 to HC3 in a GLM, so HC1 is computed as HC0 times n / (n - k).
+    """
     df = df.copy()
     x = np.log(df["troops"]) - np.log(df["troops"]).mean()
-    X = pd.DataFrame({"const": 1.0, "ln_troops_centered": x, "iraq": (df.country == "Iraq").astype(float)})
-    y = np.column_stack([df[dc_col].values, df[deaths_col].values])
+    cols = {"const": 1.0, "ln_troops_centered": x}
+    if iraq:
+        cols["iraq"] = (df.country == "Iraq").astype(float)
+    X = pd.DataFrame(cols)
+    dc = df[dc_col].astype(float).values
+    n_deaths = dc + df[deaths_col].astype(float).values
     off = np.log(df[pc_col].astype(float) / df["troops"])
+    model = sm.GLM(dc / n_deaths, X, family=sm.families.Binomial(), offset=off, var_weights=n_deaths)
+    base = model.fit()
+    quasi = model.fit(scale="X2")
+    hc0 = model.fit(cov_type="HC0")
+    n, k = X.shape
+    dispersion = base.pearson_chi2 / base.df_resid
+    assert abs(quasi.scale - dispersion) < 1e-9
     res = []
-    for name, kw in [("quasi-binomial", dict(scale="X2")), ("robust HC1", dict(cov_type="HC1"))]:
-        fit = sm.GLM(y, X, family=sm.families.Binomial(), offset=off).fit(**kw)
-        for k in X.columns:
-            res.append(dict(se_type=name, term=k, coef=fit.params[k], se=fit.bse[k], p=fit.pvalues[k],
-                            ci_lo=fit.conf_int().loc[k, 0], ci_hi=fit.conf_int().loc[k, 1],
-                            n=len(df), pearson_chi2=fit.pearson_chi2, df_resid=fit.df_resid))
+    for term in X.columns:
+        b = base.params[term]
+        se_q = quasi.bse[term]
+        t_q = stats.t.ppf(0.975, base.df_resid)
+        se_r = hc0.bse[term] * math.sqrt(n / (n - k))
+        z = stats.norm.ppf(0.975)
+        res.append(dict(se_type="quasi-binomial", term=term, coef=b, se=se_q, p=2 * stats.t.sf(abs(b / se_q), base.df_resid),
+                        ci_lo=b - t_q * se_q, ci_hi=b + t_q * se_q, n=n, pearson_chi2=base.pearson_chi2,
+                        df_resid=base.df_resid, dispersion=dispersion, se_unscaled=base.bse[term]))
+        res.append(dict(se_type="robust HC1", term=term, coef=b, se=se_r, p=2 * stats.norm.sf(abs(b / se_r)),
+                        ci_lo=b - z * se_r, ci_hi=b + z * se_r, n=n, pearson_chi2=base.pearson_chi2,
+                        df_resid=base.df_resid, dispersion=dispersion, se_unscaled=base.bse[term]))
     return res
 
 
 g = []
 for label, df, kw in [("Main: all deaths, both countries", main, {}),
-                      ("Hostile military deaths only", main, dict(deaths_col="military_deaths_hostile"))]:
+                      ("Hostile military deaths only", main, dict(deaths_col="military_deaths_hostile")),
+                      ("Afghanistan only", main[main.country == "Afghanistan"], dict(iraq=False))]:
     for r in glm(df, **kw):
         g.append(dict(model=label, **r))
 glm_tab = pd.DataFrame(g)
-# Afghanistan-only model: no Iraq column
-af = main[main.country == "Afghanistan"].copy()
-x = np.log(af["troops"]) - np.log(af["troops"]).mean()
-X = pd.DataFrame({"const": 1.0, "ln_troops_centered": x})
-y = np.column_stack([af["contractor_deaths_dba"].values, af["military_deaths"].values])
-off = np.log(af["contractors"] / af["troops"])
-rows = []
-for name, kw in [("quasi-binomial", dict(scale="X2")), ("robust HC1", dict(cov_type="HC1"))]:
-    fit = sm.GLM(y, X, family=sm.families.Binomial(), offset=off).fit(**kw)
-    for k in X.columns:
-        rows.append(dict(model="Afghanistan only", se_type=name, term=k, coef=fit.params[k], se=fit.bse[k], p=fit.pvalues[k],
-                         ci_lo=fit.conf_int().loc[k, 0], ci_hi=fit.conf_int().loc[k, 1], n=len(af),
-                         pearson_chi2=fit.pearson_chi2, df_resid=fit.df_resid))
-glm_tab = pd.concat([glm_tab, pd.DataFrame(rows)], ignore_index=True)
 glm_tab.to_csv(os.path.join(TAB, "table_glm.csv"), index=False)
 
 # ---------- Robustness ----------
@@ -181,9 +193,89 @@ for country, label, years in PERIODS[:3] + PERIODS[5:7]:
     pc_nonlocal = (pd.to_numeric(s["contractors_us"]) + pd.to_numeric(s["contractors_tcn"])).sum()
     add("4. Denominator: U.S. and TCN contractors only", country, label, base[0], base[1], pc_nonlocal, base[3])
     # 5. under-reporting multipliers
-    # 1.5 and 2.0, plus 2.15, the multiplier Crawford and Lutz (2021) apply to Labor Department counts
+    # 1.5 and 2.0, plus 2.15, the multiplier Crawford and Lutz (2021) apply to Labor Department counts.
+    # Scaling the reported deaths by a known factor scales the rate ratio and its interval by the same factor;
+    # the uncertainty comes from the counts actually observed. (A first version of this script put the scaled
+    # counts into the exact interval as if they had been observed, which made the intervals too narrow.)
     for k in (1.5, 2.0, 2.15):
-        add(f"5. Contractor deaths x {k}", country, label, base[0] * k, base[1], base[2], base[3])
+        m = measures(*base)
+        row = dict(check=f"5. Contractor deaths x {k}", country=country, period=label, contractor_deaths=base[0] * k,
+                   military_deaths=base[1], contractor_person_years=base[2], troop_person_years=base[3], **m)
+        for c in ("rate_contractors", "rate_contractors_lo", "rate_contractors_hi", "rate_ratio", "rate_ratio_lo", "rate_ratio_hi"):
+            row[c] = m[c] * k
+        row["share_deaths"] = base[0] * k / (base[0] * k + base[1])
+        rob.append(row)
+
+# ---------- Corrections for two known problems in the official counts (added after the first results) ----------
+# (a) FY2010: the census for Q4 FY2010 says the fall in Afghanistan from 107K to 71K "is not due to a large reduction
+#     in contractor personnel, but rather is due to counting errors ... that have been perpetuated throughout this
+#     Fiscal Year". Variant: every FY2010 quarter at the recounted Q4 level (70,599; parts 20,874 / 15,503 / 34,222).
+# (b) Troops: in August 2017 DoD began to count personnel on short missions, on temporary duty and in some support
+#     units (CRS R44116, Table 1, note b); around 11,000 troops were present when the official figure was about
+#     8,400 (CRS R45122, March 2018). Variant: 2,600 added to every Afghanistan quarter before Q4 FY2017, which
+#     already uses the new accounting. A proportional variant scales FY2015 to Q3 FY2017 by 11,000 / 8,400.
+tq = pd.read_csv(os.path.join(ROOT, "data", "clean", "troops_quarterly_crs.csv"))
+tq = tq[(tq.country == "Afghanistan") & tq.troops_note.str.startswith("Boots")].copy()
+tq["troops"] = tq["troops"].astype(float)
+UNCOUNTED = 11000 - 8400
+
+
+def troops_corrected(mode):
+    t2 = tq.copy()
+    before = (t2.fiscal_year < 2017) | ((t2.fiscal_year == 2017) & (t2.quarter < 4))
+    if mode == "add":
+        t2.loc[before, "troops"] += UNCOUNTED
+    elif mode == "scale":
+        t2.loc[before & (t2.fiscal_year >= 2015), "troops"] *= 11000 / 8400
+    return t2.groupby("fiscal_year").troops.mean()
+
+
+FY2010_RECOUNT = dict(contractors=70599, contractors_us=20874, contractors_tcn=15503, contractors_local=34222)
+VARIANTS = [("Main estimate", False, None),
+            ("FY2010 contractors at the recounted level", True, None),
+            ("Troops before Q4 FY2017 raised by 2,600", False, "add"),
+            ("Troops FY2015 to Q3 FY2017 scaled by 11,000/8,400", False, "scale"),
+            ("Both corrections (recount and 2,600 added)", True, "add")]
+corr = []
+corrected_panels = {}
+for vname, fix2010, tmode in VARIANTS:
+    pv = p[p.country == "Afghanistan"].copy().set_index("fiscal_year")
+    if fix2010:
+        for c, v in FY2010_RECOUNT.items():
+            pv.loc[2010, c] = v
+    if tmode:
+        tc = troops_corrected(tmode)
+        tc = tc[tc.index.isin(pv.index) & (tc.index <= 2017)]
+        pv.loc[tc.index, "troops"] = tc
+    res = {}
+    for label, years in (("surge", [2010, 2011]), ("drawdown", [2012, 2013, 2014]), ("advisory", [2015, 2016, 2017]),
+                         ("all official", list(range(2009, 2018)))):
+        s = pv.loc[years]
+        dc, dm = s.contractor_deaths_dba.sum(), s.military_deaths.sum()
+        pc, pm = s.contractors.astype(float).sum(), s.troops.astype(float).sum()
+        m = measures(dc, dm, pc, pm)
+        res[label] = m
+        corr.append(dict(variant=vname, period=label, contractor_deaths=dc, military_deaths=dm, contractor_person_years=pc,
+                         troop_person_years=pm, **m))
+    corrected_panels[vname] = pv
+    a, b = res["surge"], res["advisory"]
+    d_total = logit(b["share_deaths"]) - logit(a["share_deaths"])
+    d_mix = logit(b["share_personnel"]) - logit(a["share_personnel"])
+    corr.append(dict(variant=vname, period="decomposition surge to advisory", change_log_odds_death_share=d_total,
+                     from_force_mix=d_mix, from_relative_risk=d_total - d_mix, pct_from_force_mix=100 * d_mix / d_total))
+corrections = pd.DataFrame(corr)
+corrections.to_csv(os.path.join(TAB, "table_corrections.csv"), index=False)
+# the main test (H2) with the corrected Afghanistan figures
+cg = []
+for vname, pv in corrected_panels.items():
+    df = main.copy()
+    for col in ("contractors", "troops"):
+        for fy in range(2009, 2018):
+            df.loc[(df.country == "Afghanistan") & (df.fiscal_year == fy), col] = float(pv.loc[fy, col])
+    for r in glm(df):
+        if r["term"] == "ln_troops_centered":
+            cg.append(dict(variant=vname, **r))
+pd.DataFrame(cg).to_csv(os.path.join(TAB, "table_corrections_glm.csv"), index=False)
 rob_tab = pd.DataFrame(rob)
 
 # 3. two-year windows (Afghanistan FY2009-FY2016 in pairs, plus FY2017 alone is dropped)
@@ -230,9 +322,11 @@ nat.to_csv(os.path.join(TAB, "table_nationality_afghanistan.csv"), index=False)
 
 # Correlation of TCN share with log troops, FY2009-FY2017 (descriptive)
 s = nat[nat.fiscal_year.between(2009, 2017)]
-rho = stats.spearmanr(np.log(s.troops), s.share_tcn)
-pd.DataFrame([dict(measure="Spearman correlation, TCN share of contractors vs ln troops, FY2009-FY2017",
-                   rho=rho.statistic, p=rho.pvalue, n=len(s))]).to_csv(os.path.join(TAB, "table_tcn_correlation.csv"), index=False)
+rows = []
+for col, lab in (("share_tcn", "TCN share of contractors"), ("tcn_share_of_us_side_personnel", "TCN share of troops plus contractors")):
+    rho = stats.spearmanr(np.log(s.troops), s[col])
+    rows.append(dict(measure=f"Spearman correlation, {lab} vs ln troops, FY2009-FY2017", rho=rho.statistic, p=rho.pvalue, n=len(s)))
+pd.DataFrame(rows).to_csv(os.path.join(TAB, "table_tcn_correlation.csv"), index=False)
 
 # ---------- Cumulative totals ----------
 cum = []

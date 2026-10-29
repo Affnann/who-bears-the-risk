@@ -40,8 +40,13 @@ ax.plot([qdate(f, q) for f, q in zip(t.fiscal_year, t.quarter)], t.troops / 1000
 ax.plot([qdate(f, q) for f, q in zip(a.fiscal_year, a.quarter)], a.troops_central / 1000, color="black", linewidth=1.6,
         linestyle=(0, (2, 1.5)), label="U.S. troops (approximate)")
 ax.set_ylabel("Thousands of people")
-ax.set_xlabel("Year")
+ax.set_xlabel("Calendar year (each quarter plotted at its midpoint)")
 ax.set_xlim(2008.3, 2021.8)
+# DoD's fourth-quarter FY2010 census said the earlier FY2010 counts were inflated by counting errors
+ax.set_ylim(0, 138)
+ax.annotate("FY2010 Q1–Q3: counts that DoD later said\nwere inflated by counting errors", xy=(qdate(2010, 2), 112.6),
+            xytext=(2008.45, 130), fontsize=7.5, va="center",
+            arrowprops=dict(arrowstyle="-", color="black", linewidth=0.7, shrinkA=2, shrinkB=1))
 ax.set_xticks(range(2009, 2022, 2))
 ax.legend(loc="upper right", fontsize=8)
 fig.tight_layout()
@@ -55,7 +60,7 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(7, 5.6), sharex=True)
 ax1.plot(af.fiscal_year, af.military_deaths, color="black", marker="o", markersize=3.5, linewidth=1.3, label="U.S. military deaths (DCAS)")
 ax1.plot(af.fiscal_year, af.contractor_deaths_dba, color="black", marker="s", markersize=3.5, linewidth=1.3,
          linestyle="--", label="Contractor death cases (Defense Base Act)")
-ax1.set_ylabel("Deaths per fiscal year")
+ax1.set_ylabel("Deaths or death cases\nper fiscal year")
 ax1.legend(loc="upper right", fontsize=8)
 ax1.set_title("A. Deaths", loc="left", fontsize=9)
 ax2.plot(af.fiscal_year, 100 * af.share_deaths, color="black", marker="o", markersize=3.5, linewidth=1.3, label="Contractor share of deaths")
@@ -84,11 +89,13 @@ off = 0.12
 for col, lo, hi, mk, lab, dx in (("rate_troops", "rate_troops_lo", "rate_troops_hi", "o", "U.S. troops", -off),
                                  ("rate_contractors", "rate_contractors_lo", "rate_contractors_hi", "s", "Contractors (reported deaths)", off)):
     for part, face in ((r[r.fiscal_year <= 2017], "black"), (r[r.fiscal_year >= 2018], "white")):
+        if col == "rate_contractors":
+            face = "black"  # contractor rates do not use troop levels
         ax.errorbar(part.fiscal_year + dx, part[col], yerr=[part[col] - part[lo], part[hi] - part[col]], fmt=mk,
                     color="black", markerfacecolor=face, markersize=4.5, elinewidth=0.9, capsize=2,
-                    label=lab if face == "black" else None)
+                    label=lab if part.fiscal_year.min() <= 2017 else None)
 ax.axvline(2017.5, color="grey", linewidth=0.8)
-ax.text(2017.65, 0.97, "Approximate troop\nlevels (hollow markers)", fontsize=7.5, va="top", transform=ax.get_xaxis_transform())
+ax.text(2017.65, 0.97, "Troop rates use\napproximate troop levels\n(hollow markers)", fontsize=7.5, va="top", transform=ax.get_xaxis_transform())
 ax.set_ylabel("Deaths per 1,000 person-years")
 ax.set_ylim(0, None)
 ax.set_xticks(range(2009, 2021))
@@ -106,8 +113,11 @@ ax.plot(n.fiscal_year, 100 * n.share_local, color="#9a9a9a", linewidth=1.3, mark
 ax.plot(n.fiscal_year, 100 * n.share_tcn, color="black", linewidth=1.5, marker="o", markersize=3.5, label="Third-country nationals, % of contractors")
 ax.plot(n.fiscal_year, 100 * n.share_us, color="black", linewidth=1.2, linestyle="--", marker="s", markersize=3.2, label="U.S. citizens, % of contractors")
 tt = n.dropna(subset=["tcn_share_of_us_side_personnel"])
-ax.plot(tt.fiscal_year, 100 * tt.tcn_share_of_us_side_personnel, color="black", linewidth=1.2, linestyle=":", marker="D", markersize=3,
-        label="Third-country nationals, % of troops plus contractors")
+ax.plot(tt.fiscal_year, 100 * tt.tcn_share_of_us_side_personnel, color="black", linewidth=1.2, linestyle=":", marker="D",
+        markersize=3.2, label="Third-country nationals, % of troops plus contractors\n(hollow markers: approximate troop levels)")
+ap = tt[tt.fiscal_year >= 2018]
+ax.plot(ap.fiscal_year, 100 * ap.tcn_share_of_us_side_personnel, linestyle="none", marker="D", markersize=3.2,
+        color="black", markerfacecolor="white")
 ax.set_ylim(0, 80)
 ax.set_ylabel("Percent")
 ax.set_xticks(range(2009, 2022))

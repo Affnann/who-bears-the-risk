@@ -72,8 +72,25 @@ so that ln RR_ct = *β*_0 + *β*_1 (ln *P*_M,ct − mean) + *β*_2 Iraq_c. H2 pr
 
 ### Before any result was computed
 
-- 29 October 2026, about 17:35 UTC: FY2021 is left out of the rate extension in section 7, item 6. Troop levels changed within months during the withdrawal and evacuation, and the census counted no contractors in its fourth quarter, so no yearly troop figure for FY2021 can be defended. FY2021 still appears in the death counts and shares, which need no troop figure.
+- 29 October 2026, by 17:14 UTC: FY2021 is left out of the rate extension in section 7, item 6. Troop levels changed within months during the withdrawal and evacuation, and the census counted no contractors in its fourth quarter, so no yearly troop figure for FY2021 can be defended. FY2021 still appears in the death counts and shares, which need no troop figure. (This entry first gave the time as "about 17:35 UTC", which was wrong: the file was last saved at 17:14:16 UTC, and the first result tables were created at 17:17:11 UTC.)
+
+### Not in the plan, added while the analysis code was written
+
+These were added between the plan (17:12 UTC) and the commit of the code (17:44 UTC). The file history cannot show whether each was added before or after the first results, so they are listed here:
+
+- the main test with hostile military deaths only, and for Afghanistan alone (Table 5);
+- a rank correlation as the test of H3, which the plan did not specify;
+- two extra rows in the period table (FY2018 to FY2020 with approximate troops; all years with official troop counts) and one extra comparison in the decomposition (surge to drawdown).
 
 ### After results were seen
 
-(none yet)
+All on 29 October 2026, after an independent check of the first draft:
+
+1. About 19:00 UTC: the quasi-binomial standard errors in the main test were wrong. statsmodels, given the two-column binomial form with `scale="X2"`, used a scale of about 0.05 instead of the dispersion (about 11 to 13). The model is now fitted to proportions with the number of deaths as weights, which gives the correct scale, and the p-values use the t distribution with the residual degrees of freedom. The robust standard errors labelled HC1 were in fact HC0, because statsmodels returns the same matrix for HC0 to HC3 in a GLM; HC1 is now HC0 times n / (n − k). The estimate of *β*_1 does not change, and neither does the conclusion about H2.
+2. About 19:00 UTC: in robustness check 5, the rate ratio's interval is now the main interval multiplied by the factor. The first version put the scaled counts into the exact interval as if they had been observed, which made the intervals too narrow. The point estimates do not change.
+3. About 19:00 UTC: H3 is now reported with both of its measures. The rank correlation with the log of troop numbers is 0.03 for the share of third-country nationals among contractors, and −0.42 for their share of all U.S.-side personnel. The first draft reported only the first.
+4. About 19:00 UTC: two corrections for known problems in the official counts were added as robustness checks. They are not in the plan. The main estimates are unchanged.
+   - The census for the fourth quarter of FY2010 states that the fall in Afghanistan from 107,000 to 71,000 "is not due to a large reduction in contractor personnel, but rather is due to counting errors ... that have been perpetuated throughout this Fiscal Year". The check puts every FY2010 quarter at the recounted fourth-quarter level.
+   - In August 2017 the Defense Department began to count troops on short missions, on temporary duty and in some support units (CRS R44116, Table 1, note b), and about 11,000 troops were then present against an official figure of about 8,400 (CRS R45122, March 2018). The check adds 2,600 troops to every Afghanistan quarter before the fourth quarter of FY2017. A variant scales FY2015 to the third quarter of FY2017 by 11,000 / 8,400.
+5. About 19:00 UTC: the approximate troop levels for FY2019 and FY2020 were revised. The 1 November 2019 version of CRS R45122 reports that troops had been reduced to between 12,000 and 13,000 by October 2019, and the later versions give 12,000 in March and May 2020. The central value for the first quarter of FY2018 was set to a midpoint, as the file's own rule says. The FY2018 to FY2020 extension changes slightly: its rate ratio goes from 0.95 to 0.93.
+6. The text now says "95 quarters" where it said "103". The CRS tables have 103 quarter rows, but only 95 of them overlap the census, and all 95 match.

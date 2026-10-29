@@ -7,9 +7,11 @@ The code rebuilds every table and figure in the paper from public sources: the D
 ## What the paper finds
 
 - In Afghanistan, contractors' share of the reported deaths on the U.S. side rose from 44.1 percent during the surge (FY2010-FY2011) to 74.9 percent during the advisory mission (FY2015-FY2017).
-- About four-fifths of that rise came from the force mix, as contractors per soldier rose from 1.05 to 3.03, and one-fifth from a rise in contractors' relative risk.
-- On the reported figures, a contractor was less likely to die than a soldier during the surge (rate ratio 0.75, 95 percent interval 0.68 to 0.83) and about as likely during the advisory mission (0.98, 0.70 to 1.39). Contractor deaths are counted only when a claim is filed, so these are lower bounds; with the under-reporting factor used by the Costs of War project, the rate ratio is 1.4 to 2.1.
-- Third-country nationals rose from 12.8 percent of DoD contractors in Afghanistan in FY2009 to 40.7 percent in FY2019, largely in place of Afghan workers.
+- About four-fifths of the rise in its log-odds came from the force mix, as contractors per soldier rose from 1.05 to 3.03, and one-fifth from a rise in contractors' relative risk.
+- On the reported figures, a contractor was less likely to die than a soldier during the surge (rate ratio 0.75, 95 percent interval 0.68 to 0.83) and about as likely during the advisory mission (0.98, 0.70 to 1.39). The regression test finds no sign that the rate ratio rose as troop numbers fell (coefficient 0.057, quasi-binomial standard error 0.200).
+- Two known problems in the official counts are corrected in a robustness check: DoD said that its contractor counts for the first three quarters of FY2010 were inflated by counting errors, and the troop counts before August 2017 left out personnel on short missions and temporary duty. With both corrections the rate ratio is 0.91 in the surge and 1.24 in the advisory mission, and the force mix accounts for 77 percent of the rise.
+- Contractor deaths are counted only when a claim is filed, and workers from Afghanistan and third countries filed far fewer claims than Americans. With the under-reporting factor used by the Costs of War project, the rate ratio is 1.4 to 2.1. The Labor Department's counts also include contractors of other agencies, who are not in the census, which pulls the other way.
+- Third-country nationals rose from 12.8 percent of DoD contractors in Afghanistan in FY2009 to 40.7 percent in FY2019, mainly because the number of Afghan workers fell.
 
 ## What is here
 
@@ -30,8 +32,10 @@ Which output goes with which part of the paper:
 | `output/tables/table_decomposition.csv` | Table 4 |
 | `output/tables/table_glm.csv` | Table 5 |
 | `output/tables/table_nationality_afghanistan.csv` | Table 6 and the person-years in Section 6.7 |
-| `output/tables/table_robustness.csv` | Table 7, and the two-year windows and approximate troop levels in Section 7 |
-| `output/tables/table_tcn_correlation.csv` | The rank correlation in Section 6.7 |
+| `output/tables/table_robustness.csv` | Table 7 (the checks set in advance), and the two-year windows and approximate troop levels in Section 7 |
+| `output/tables/table_tcn_correlation.csv` | The two rank correlations for H3 in Section 6.7 |
+| `output/tables/table_corrections.csv` | The corrections for the FY2010 contractor counts and for the troop counts before August 2017 (Table 7 and Section 7) |
+| `output/tables/table_corrections_glm.csv` | The test of H2 with the corrected counts (Section 6.5) |
 | `output/tables/table_cumulative.csv` | The FY2009-FY2021 totals in Sections 6.2 and 6.6 |
 | `output/tables/table_guard_contracts_by_agency_musd.csv` | The guard-service obligations in Section 4.3 |
 | `data/clean/check_crs_vs_census.csv` | The check described in Section 4.1 |
