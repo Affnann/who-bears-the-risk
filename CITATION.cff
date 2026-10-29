@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "who-bears-the-risk: replication package for 'Who Bears the Risk of Privatized War?'"
+authors:
+  - family-names: "Azom"
+    given-names: "Kazi Affnann"
+    orcid: "https://orcid.org/0009-0001-5998-7642"
+repository-code: "https://github.com/Affnann/who-bears-the-risk"
+license: MIT
+keywords:
+  - private military contractors
+  - war casualties
+  - third-country nationals
+  - Defense Base Act
+  - Afghanistan
+  - Iraq
+references:
+  - type: data
+    title: "contractor-census: U.S. DoD quarterly contractor census for the USCENTCOM area, FY2008-FY2025"
+    authors:
+      - family-names: "Azom"
+        given-names: "Kazi Affnann"
+    version: "1.0.0"
+    doi: "10.5281/zenodo.23736051"
+  - type: data
+    title: "contractor-injury-claims: U.S. Defense Base Act claims by country, FY2009-FY2024"
+    authors:
+      - family-names: "Azom"
+        given-names: "Kazi Affnann"
+    version: "1.0.0"
+    doi: "10.5281/zenodo.23746799"
+  - type: data
+    title: "us-guard-spending: U.S. federal guard-service contracts (PSC S206), FY2008-FY2026"
+    authors:
+      - family-names: "Azom"
+        given-names: "Kazi Affnann"
+    version: "1.0.0"
+    doi: "10.5281/zenodo.23750993"
