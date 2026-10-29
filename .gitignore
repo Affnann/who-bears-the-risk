@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+# Large input: 00_get_data.py downloads it from Zenodo (us-guard-spending v1.0.0)
+data/raw/us-guard-spending/
+# Paper drafts are not part of the replication package
+paper/

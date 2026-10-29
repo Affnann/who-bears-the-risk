@@ -1,0 +1,133 @@
+country,country_in_source,no_lost_time,lost_time_3_days_or_less,lost_time_4_days_or_more,death,salary_continuation,other,total,source_url
+IRAQ,Iraq,56477,107,33978,1765,548,77,92952,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+AFGHANISTAN,Afghanistan,45106,46,29645,1865,153,107,76922,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NATION PENDING,Nation Pending,14013,53,5925,101,59,52,20203,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+KUWAIT,Kuwait,7506,24,5533,133,252,,13448,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+UNITED STATES,United States of America (the),3634,25,3628,44,,,7336,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MARSHALL ISLANDS,Marshall Islands (the),1347,,1198,25,,,2577,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+QATAR,Qatar,732,,1229,23,,,1999,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+PUERTO RICO,Puerto Rico,712,,977,,,,1703,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GERMANY,Germany,769,,610,13,13,,1410,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+UNITED ARAB EMIRATES,United Arab Emirates (the),453,,425,18,,,906,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+DJIBOUTI,Djibouti,651,,239,,,,903,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ANTARCTICA,Antarctica,645,,175,,,,821,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NORTH MACEDONIA,Macedonia (the former Yugoslav Republic of),569,,158,,,,732,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+JAPAN,Japan,357,,239,16,,,617,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+JORDAN,Jordan,289,,227,40,,,563,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+COLOMBIA,Colombia,293,,197,20,,,519,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BOSNIA AND HERZEGOVINA,Bosnia and Herzegovina,136,,359,13,,,517,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+UGANDA,Uganda,108,,377,,,,491,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SOUTH KOREA,Korea (the Republic of),292,,174,12,,,479,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SAUDI ARABIA,Saudi Arabia,193,,241,28,,,464,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SYRIAN ARAB REPUBLIC,Syrian Arab Republic,157,,212,15,,,385,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CUBA,Cuba,161,,194,,,,365,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BAHAMAS,Bahamas (the),178,,180,,,,362,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SOMALIA,Somalia,187,,151,,,,351,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+PAKISTAN,Pakistan,134,,163,45,,,342,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+POLAND,Poland,237,,93,,,,334,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BAHRAIN,Bahrain,169,,128,,,,301,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+UNITED KINGDOM,United Kingdom of Great Britain and Northern Ireland (the),153,,124,,,,288,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ISRAEL,Israel,164,,118,,,,287,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+THAILAND,Thailand,77,,185,,,,275,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+HONDURAS,Honduras,151,,107,,,,263,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+PHILIPPINES,Philippines (the),107,,97,,,,212,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SPAIN,Spain,176,,33,,,,210,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+INDIA,India,104,,102,,,,208,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+TURKEY,Turkey,103,,89,,,,199,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NIGER,Niger (the),112,,72,,,,195,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+OMAN,Oman,84,,93,,,,181,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+KENYA,Kenya,88,,83,,,,180,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SUDAN,Sudan (the),83,,93,,,,178,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ITALY,Italy,83,,80,,,,167,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ROMANIA,Romania,135,,28,,,,165,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+HAITI,Haiti,88,,72,,,,164,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GUAM,Guam,80,,66,,,,157,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+LEBANON,Lebanon,91,,56,,,,151,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+LIBERIA,Liberia,68,,59,,,,136,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+RUSSIAN FEDERATION,Russian Federation (the),74,,56,,,,133,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CHINA,China,57,,70,,,,130,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GUATEMALA,Guatemala,37,,88,,,,126,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+TAIWAN,Taiwan (Province of China),73,,41,,,,114,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+IRELAND,Ireland,71,,35,,,,106,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MEXICO,Mexico,42,,62,,,,105,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+EGYPT,Egypt,39,,48,,,,94,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+INDONESIA,Indonesia,41,,45,,,,93,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SOUTH SUDAN,South Sudan,26,,63,,,,91,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SOUTH AFRICA,South Africa,41,,44,,,,90,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+PERU,Peru,47,,38,,,,89,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GREECE,Greece,35,,46,,,,83,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BULGARIA,Bulgaria,57,,20,,,,80,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+UKRAINE,Ukraine,40,,37,,,,80,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CENTRAL AFRICAN REPUBLIC,Central African Republic (the),40,,37,,,,78,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CHAD,Chad,21,,42,,,,71,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NIGERIA,Nigeria,34,,26,,,,71,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+KYRGYZSTAN,Kyrgyzstan,29,,37,,,,69,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+VIETNAM,Viet Nam,31,,28,,,,66,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+EL SALVADOR,El Salvador,,,52,,,,62,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GREENLAND,Greenland,38,,19,,,,59,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+UNITED STATES MINOR OUTLYING ISLANDS,United States Minor Outlying Islands (the),22,,34,,,,59,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+AUSTRALIA,Australia,23,,32,,,,58,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+UZBEKISTAN,Uzbekistan,14,,34,,,,57,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ANTIGUA AND BARBUDA,Antigua and Barbuda,29,,25,,,,54,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MONTENEGRO,Montenegro,30,,21,,,,52,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BELGIUM,Belgium,17,,32,,,,51,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+PANAMA,Panama,32,,17,,,,50,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ZAMBIA,Zambia,33,,14,,,,50,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+YEMEN,Yemen,21,,25,,,,48,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+IRAN,Iran (Islamic Republic of),27,,19,,,,47,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GHANA,Ghana,20,,22,,,,45,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NORTH KOREA,Korea (the Democratic Peoples Republic of),31,,14,,,,45,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MALI,Mali,,,31,,,,44,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GEORGIA,Georgia,16,,21,,,,41,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MOROCCO,Morocco,25,,14,,,,41,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CONGO,Congo (the),14,,24,,,,39,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SIERRA LEONE,Sierra Leone,16,,20,,,,37,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CROATIA,Croatia,,,24,,,,36,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GUINEA,Guinea,14,,19,,,,33,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CYPRUS,Cyprus,21,,,,,,31,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ETHIOPIA,Ethiopia,14,,16,,,,31,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+HUNGARY,Hungary,,,23,,,,31,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BANGLADESH,Bangladesh,18,,,,,,30,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BURKINA FASO,Burkina Faso,18,,12,,,,30,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+"TANZANIA, UNITED REPUBLIC OF","Tanzania, United Republic of",,,14,,,,30,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BRAZIL,Brazil,,,18,,,,28,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+COSTA RICA,Costa Rica,22,,,,,,28,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+KAZAKHSTAN,Kazakhstan,,,17,,,,28,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NAMIBIA,Namibia,,,14,,,,28,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SENEGAL,Senegal,13,,12,,,,28,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SINGAPORE,Singapore,13,,14,,,,28,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BRITISH INDIAN OCEAN TERRITORY,British Indian Ocean Territory (the),,,14,,,,24,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CANADA,Canada,,,16,,,,24,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NEPAL,Nepal,,,12,,,,24,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SRI LANKA,Sri Lanka,,,12,,,,23,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+TUNISIA,Tunisia,,,12,,,,23,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NETHERLANDS,Netherlands (the),14,,,,,,22,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CAMBODIA,Cambodia,,,,,,,21,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+CAMEROON,Cameroon,,,13,,,,20,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+LIBYA,Libya,,,,,,,19,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MALAWI,Malawi,,,,,,,19,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MONGOLIA,Mongolia,,,,,,,19,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MOZAMBIQUE,Mozambique,,,,,,,19,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+SAINT HELENA,"Saint Helena, Ascension and Tristan da Cunha",13,,,,,,19,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ECUADOR,Ecuador,,,,,,,18,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+FRANCE,France,,,,,,,18,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+LITHUANIA,Lithuania,,,,,,,17,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+TAJIKISTAN,Tajikistan,,,,,,,17,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ALAND ISLANDS,Ã…land Islands,,,,,,,17,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+AUSTRIA,Austria,,,,,,,16,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BOLIVIA,Bolivia (Plurinational State of),,,,,,,16,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NORWAY,Norway,,,,,,,16,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ZIMBABWE,Zimbabwe,,,,,,,16,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ICELAND,Iceland,,,,,,,15,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+PALESTINE,"Palestine, State of",,,,,,,15,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+ALBANIA,Albania,,,,,,,14,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NICARAGUA,Nicaragua,,,,,,,14,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NORTHERN MARIANA ISLANDS,Northern Mariana Islands (the),,,,,,,14,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+RWANDA,Rwanda,,,,,,,14,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+MADAGASCAR,Madagascar,,,,,,,13,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+NEW ZEALAND,New Zealand,,,,,,,13,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+PARAGUAY,Paraguay,,,,,,,13,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BARBADOS,Barbados,,,,,,,12,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+BOTSWANA,Botswana,,,,,,,12,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+GUYANA,Guyana,,,,,,,12,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
+URUGUAY,Uruguay,,,,,,,12,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx

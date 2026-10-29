@@ -1,0 +1,13 @@
+fiscal_year,quarter,troops_central,troops_low,troops_high,basis
+2018,1,12500,11100,14000,"Q4 FY2017 official figure 11,100 (CRS R44116, Table 1); about 14,000 by September 2018 (CRS R45122, 17 Sep 2018)"
+2018,2,15000,14000,15000,"""around 15,000"" (CRS R45122, 5 Mar 2018 and 1 Jun 2018)"
+2018,3,15000,14000,15000,"""around 15,000"" (CRS R45122, 1 Jun 2018)"
+2018,4,14000,14000,15000,"""around 14,000"" (CRS R45122, 17 Sep 2018)"
+2019,1,14000,13000,14000,"""around 14,000"" (CRS R45122, 12 Dec 2018)"
+2019,2,14000,13000,14000,"""around 14,000"" (CRS R45122, 26 Feb 2019)"
+2019,3,14000,13000,14000,"""around 14,000"" (CRS R45122, 1 May 2019)"
+2019,4,14000,13000,14000,"""around 14,000"" (CRS R45122, 1 Aug 2019)"
+2020,1,13500,13000,14000,"""some 14,000"" (CRS R45122, 1 Nov 2019); 13,000 at the February 2020 agreement (CRS R45122, 1 May 2020)"
+2020,2,13000,12000,13000,"13,000 at the 29 Feb 2020 agreement; ""approximately 12,000"" as of May 2020 (CRS R45122, 1 May 2020)"
+2020,3,10000,8600,12000,"""approximately 12,000"" as of May 2020; 8,600 reached in June 2020 (CRS R45122, 25 Jun 2020)"
+2020,4,8000,6500,8600,"8,600 from June 2020; 4,500 expected ""by November"" (CRS R45122, 10 Nov 2020)"

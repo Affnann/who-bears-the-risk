@@ -68,6 +68,12 @@ so that ln RR_ct = *β*_0 + *β*_1 (ln *P*_M,ct − mean) + *β*_2 Iraq_c. H2 pr
 5. Under-reporting scenarios: contractor deaths multiplied by 1.5 and by 2.0, and by the ratio implied by Costs of War's estimate, if that paper states the reported count it starts from.
 6. Afghanistan FY2018 to FY2021 with approximate troop levels, using low and high values.
 
-## 8. Changes after results were seen
+## 8. Changes
+
+### Before any result was computed
+
+- 29 October 2026, about 17:35 UTC: FY2021 is left out of the rate extension in section 7, item 6. Troop levels changed within months during the withdrawal and evacuation, and the census counted no contractors in its fourth quarter, so no yearly troop figure for FY2021 can be defended. FY2021 still appears in the death counts and shares, which need no troop figure.
+
+### After results were seen
 
 (none yet)

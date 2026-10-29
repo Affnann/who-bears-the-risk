@@ -1,0 +1,6 @@
+operation,records,records_without_date,dcas_extraction_date,url
+OEF,2350,0,"October 28, 2026",https://dcas.dmdc.osd.mil/dcas/api/report/wia/fallenByName/oef
+OFS,108,0,"October 28, 2026",https://dcas.dmdc.osd.mil/dcas/api/report/wia/fallenByName/ofs
+OIF,4417,1,"October 28, 2026",https://dcas.dmdc.osd.mil/dcas/api/report/wia/fallenByName/oif
+OND,74,0,"October 28, 2026",https://dcas.dmdc.osd.mil/dcas/api/report/wia/fallenByName/ond
+OIR,124,0,"October 28, 2026",https://dcas.dmdc.osd.mil/dcas/api/report/wia/fallenByName/oir

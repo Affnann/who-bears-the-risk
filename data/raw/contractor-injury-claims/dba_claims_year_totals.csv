@@ -1,0 +1,18 @@
+table,label_in_source,no_lost_time,lost_time_3_days_or_less,lost_time_4_days_or_more,death,salary_continuation,other,total,source_url
+FY2009,Grand Total: 103,5311,1327,5236,336,7,0,12217,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2009)
+FY2010,Grand Total: 110,5576,1605,6982,513,4,0,14680,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2010)
+FY2011,Grand Total: 106,4968,1105,4964,465,8,0,11510,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2011)
+FY2012,Grand Total: 113,7068,353,4438,302,3,1,12165,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2012)
+FY2013,Grand Total: 118,7108,183,4038,237,2,0,11568,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2013)
+FY2014,Grand Total: 111,4655,175,2929,143,1,0,7903,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2014)
+FY2015,Grand Total: 113,3356,175,2221,111,3,1,5867,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2015)
+FY2016,Grand Total: 118,3649,135,2210,99,0,2,6095,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2016)
+FY2017,Grand Total: 110,3974,206,2354,90,0,3,6627,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2017)
+FY2018,Grand Total: 108,3853,448,2320,73,0,0,6694,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2018)
+FY2019,Grand Total: 109,4300,155,3917,74,0,1,8447,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2019)
+FY2020,Total 118,7699,462,6621,78,3,372,15235,https://www.dol.gov/agencies/owcp/dlhwc/dbaallnation(fy2020)
+FY2021,Total,,,,,,,18520,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/FY21countrydata.xlsx
+FY2022,Total,,,,,,,15571,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/FY22countrydata.xlsx
+FY2023,TOTALS,10905,60,4132,22,0,0,15313,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/FY23countrydata.xlsx
+FY2024,Totals,20289,39,6352,18,0,0,27062,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/FY24countrydata_redacted.xlsx
+CUM2001-2024,Totals,138855,255,89807,4176,1025,236,235346,https://www.dol.gov/sites/dolgov/files/OWCP/dlhwc/dbadata/country_data_cumulative2001-2024_redacted.xlsx
