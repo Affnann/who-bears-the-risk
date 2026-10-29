@@ -1,0 +1,12 @@
+Data license
+
+Copyright (c) 2026 Kazi Affnann Azom
+
+The derived data in data/clean/ and output/, and the hand-built file
+data/raw/approx/afghanistan_troops_fy2018_2020_approx.csv, are licensed under
+the Creative Commons Attribution 4.0 International License (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/
+
+The code is licensed separately under the MIT License (see LICENSE). The
+downloaded inputs in data/raw/ keep the terms of their sources (see
+data/README.md).

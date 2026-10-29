@@ -1,8 +1,8 @@
 fiscal_year,quarter,troops_central,troops_low,troops_high,basis
-2018,1,13050,11100,15000,"Q4 FY2017 official figure 11,100 (CRS R44116, Table 1); ""around 15,000"" by March 2018 after about 3,500 more troops were ordered in September 2017 (CRS R45122, 5 Mar 2018); central value is the midpoint"
-2018,2,15000,14000,15000,"""around 15,000"" (CRS R45122, 5 Mar 2018); the 17 Sep 2018 version puts the level after the added troops arrived at ""around 14,000"""
-2018,3,15000,14000,15000,"""around 15,000"" (CRS R45122, 1 Jun 2018); ""around 14,000"" in the 17 Sep 2018 version"
-2018,4,14000,14000,15000,"""around 14,000"" (CRS R45122, 17 Sep 2018)"
+2018,1,14500,14000,15300,"15,298 active-duty and reserve troops on 30 Sep 2017 (Defense Manpower Data Center, cited in CRS R45122, 5 Mar 2018, note 67), described as ""around 15,000"" (CRS R45122, 5 Mar 2018) and, for the same level, as ""around 14,000"" from the 17 Sep 2018 version; central value is the midpoint"
+2018,2,14500,14000,15000,"""around 15,000"" (CRS R45122, 5 Mar 2018); ""around 14,000"" for the same level in the 17 Sep 2018 version; central value is the midpoint"
+2018,3,14500,14000,15000,"""around 15,000"" (CRS R45122, 1 Jun 2018); ""around 14,000"" for the same level in the 17 Sep 2018 version; central value is the midpoint"
+2018,4,14500,14000,15000,"""around 14,000"" (CRS R45122, 17 Sep 2018), the level that the earlier versions put at ""around 15,000"" (CRS R45122, 1 Jun 2018); central value is the midpoint"
 2019,1,14250,13500,15000,"""around 14,000"" (CRS R45122, 12 Dec 2018); reduced ""by 2,000 over the past year, to between 12,000 and 13,000"" by October 2019 (CRS R45122, 1 Nov 2019); central values for FY2019 follow a steady reduction from about 14,500 to 12,500"
 2019,2,13750,13000,14500,"""around 14,000"" (CRS R45122, 26 Feb 2019); steady reduction to 12,000-13,000 by October 2019 (CRS R45122, 1 Nov 2019)"
 2019,3,13250,12500,14000,"""around 14,000"" (CRS R45122, 1 May 2019); steady reduction to 12,000-13,000 by October 2019 (CRS R45122, 1 Nov 2019)"

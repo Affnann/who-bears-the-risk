@@ -29,6 +29,7 @@ c = c[c.country == "Afghanistan"].sort_values(["fiscal_year", "quarter"])
 t = pd.read_csv(os.path.join(CLEAN, "troops_quarterly_crs.csv"))
 t = t[(t.country == "Afghanistan") & (t.troops_note.str.startswith("Boots"))].copy()
 t["troops"] = t["troops"].astype(float)
+t = t[(t.fiscal_year > 2008) | ((t.fiscal_year == 2008) & (t.quarter >= 3))]  # same quarters as the census
 a = pd.read_csv(os.path.join(ROOT, "data", "raw", "approx", "afghanistan_troops_fy2018_2020_approx.csv"))
 x = [qdate(f, q) for f, q in zip(c.fiscal_year, c.quarter)]
 fig, ax = plt.subplots(figsize=(7, 3.8))
@@ -70,7 +71,10 @@ approx = sp[sp.fiscal_year >= 2017]
 ax2.plot(official.fiscal_year, 100 * official.share_personnel, color="#777777", linewidth=1.3, marker="^", markersize=3.5,
          label="Contractor share of personnel (official troop counts)")
 ax2.plot(approx.fiscal_year, 100 * approx.share_personnel, color="#777777", linewidth=1.3, linestyle=(0, (2, 1.5)),
-         label="Contractor share of personnel (approximate troop levels)")
+         label="Contractor share of personnel (approximate troop levels,\nhollow markers)")
+ap2 = approx[approx.fiscal_year >= 2018]
+ax2.plot(ap2.fiscal_year, 100 * ap2.share_personnel, linestyle="none", marker="^", markersize=3.5, color="#777777",
+         markerfacecolor="white")
 ax2.set_ylim(0, 100)
 ax2.set_ylabel("Percent")
 ax2.legend(loc="lower right", fontsize=8)

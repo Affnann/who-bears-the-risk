@@ -9,17 +9,15 @@ Sources:
 
 Run: python code/00_get_data.py
 """
-import csv, datetime, hashlib, io, json, os, sys, time, urllib.request, zipfile
+import csv, datetime, hashlib, io, json, os, ssl, sys, time, urllib.request, zipfile
 from collections import Counter
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.path.join(ROOT, "data", "raw")
 os.makedirs(RAW, exist_ok=True)
 UA = {"User-Agent": "Mozilla/5.0 (research replication script)"}
-CA = os.environ.get("SSL_CERT_FILE") or ("/root/.ccr/ca-bundle.crt" if os.path.exists("/root/.ccr/ca-bundle.crt") else None)
-
-import ssl
-CTX = ssl.create_default_context(cafile=CA) if CA else ssl.create_default_context()
+# Certificates come from the system's default store; set SSL_CERT_FILE to use another CA bundle.
+CTX = ssl.create_default_context()
 
 
 def get(url, tries=4):

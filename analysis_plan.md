@@ -2,7 +2,7 @@
 
 **Paper:** Who Bears the Risk of Privatized War? Troops, Contractors and Third-Country Nationals in Afghanistan and Iraq
 
-**Written:** 29 October 2026, committed at 17:12 UTC (see the git history). This was before any death rate, rate ratio, death share, personnel share, decomposition or regression in this plan had been computed.
+**Written:** 29 October 2026, committed at 17:12 UTC (see the git history). This was before any death rate, rate ratio, death share, personnel share, decomposition or regression in this plan had been computed. The commit was made in the project's local git repository, which was first pushed to GitHub at 18:18 UTC, after the first results (17:17 UTC), so the plan's date rests on the commit record.
 
 **What had been seen before writing it:** the yearly Defense Base Act death counts for Afghanistan and Iraq as printed in contractor-injury-claims v1.0.0; the quarterly troop and contractor figures in CRS report R44116 (Tables 1 and 3); the quarterly census rows in contractor-census v1.0.0; and the number of DCAS death records per operation and incident country (totals only, not by year). Three figures were also seen in the text of sources: the troop numbers quoted in some census reports, the troop levels quoted in CRS report R45122, and Coburn and Gill's (2022) claim rates by claimant address.
 
@@ -80,7 +80,11 @@ These were added between the plan (17:12 UTC) and the commit of the code (17:44 
 
 - the main test with hostile military deaths only, and for Afghanistan alone (Table 5);
 - a rank correlation as the test of H3, which the plan did not specify;
-- two extra rows in the period table (FY2018 to FY2020 with approximate troops; all years with official troop counts) and one extra comparison in the decomposition (surge to drawdown).
+- the drawdown period (FY2012 to FY2014), which section 4 does not name: its row in the period table (Table 3), the comparison of the surge with the drawdown in the decomposition (Table 4) and the drawdown column in the robustness table (Table 7);
+- two extra rows in the period table: FY2018 to FY2020 together, with approximate troops, and all years with official troop counts, for each country;
+- descriptive totals and comparisons: the death counts for FY2009 to FY2021 (`table_cumulative.csv`) and the comparisons with earlier figures in Section 6.8 of the paper.
+
+The code commit shows an author time of 17:44 UTC and a commit time of 18:15 UTC, because it was amended at 18:15 to stop tracking a large downloaded input and the paper drafts (`.gitignore`); the amendment did not change the code.
 
 ### After results were seen
 
@@ -92,5 +96,20 @@ All on 29 October 2026, after an independent check of the first draft:
 4. About 19:00 UTC: two corrections for known problems in the official counts were added as robustness checks. They are not in the plan. The main estimates are unchanged.
    - The census for the fourth quarter of FY2010 states that the fall in Afghanistan from 107,000 to 71,000 "is not due to a large reduction in contractor personnel, but rather is due to counting errors ... that have been perpetuated throughout this Fiscal Year". The check puts every FY2010 quarter at the recounted fourth-quarter level.
    - In August 2017 the Defense Department began to count troops on short missions, on temporary duty and in some support units (CRS R44116, Table 1, note b), and about 11,000 troops were then present against an official figure of about 8,400 (CRS R45122, March 2018). The check adds 2,600 troops to every Afghanistan quarter before the fourth quarter of FY2017. A variant scales FY2015 to the third quarter of FY2017 by 11,000 / 8,400.
-5. About 19:00 UTC: the approximate troop levels for FY2019 and FY2020 were revised. The 1 November 2019 version of CRS R45122 reports that troops had been reduced to between 12,000 and 13,000 by October 2019, and the later versions give 12,000 in March and May 2020. The central value for the first quarter of FY2018 was set to a midpoint, as the file's own rule says. The FY2018 to FY2020 extension changes slightly: its rate ratio goes from 0.95 to 0.93.
+5. About 19:00 UTC: the approximate troop levels (`data/raw/approx/afghanistan_troops_fy2018_2020_approx.csv`) were revised. The 1 November 2019 version of CRS R45122 reports that troops had been reduced to between 12,000 and 13,000 by October 2019, and the later versions give 12,000 in March and May 2020. The changes:
+   - FY2018, first quarter: central value 12,500 to 13,050 (the midpoint of 11,100 and 15,000, as the file's own rule says), high value 14,000 to 15,000;
+   - FY2019, quarters 1 to 4: central values 14,000 in every quarter to 14,250, 13,750, 13,250 and 12,750; low values 13,000 in every quarter to 13,500, 13,000, 12,500 and 12,000; high values 14,000 in every quarter to 15,000, 14,500, 14,000 and 14,000;
+   - FY2020: first quarter, central 13,500 to 12,500, low 13,000 to 12,000 and high 14,000 to 13,000; second quarter, central 13,000 to 12,500; third quarter, central 10,000 to 10,300; fourth quarter, central 8,000 to 8,600.
+
+   The FY2018 to FY2020 extension changes slightly: its rate ratio goes from 0.95 to 0.93.
 6. The text now says "95 quarters" where it said "103". The CRS tables have 103 quarter rows, but only 95 of them overlap the census, and all 95 match.
+
+After a second independent check:
+
+7. About 20:10 UTC: the approximate troop levels for FY2018 were revised again. Revision 5 assumed that the level rose during the first quarter of FY2018, but the R45122 versions date the count of 15,298 to 30 September 2017, before that quarter began, and the versions from September 2018 describe the same level as "around 14,000" rather than "around 15,000". Every FY2018 quarter now has the midpoint, 14,500, as its central value. The changes:
+   - first quarter: central 13,050 to 14,500, low 11,100 to 14,000, high 15,000 to 15,300;
+   - second and third quarters: central 15,000 to 14,500;
+   - fourth quarter: central 14,000 to 14,500.
+
+   The FY2018 rate ratio goes from 1.47 to 1.49, and the FY2018 to FY2020 rate ratio from 0.93 (0.66 to 1.34) to 0.94 (0.66 to 1.35).
+8. Outputs added, with no change to any result: the Iraq death totals for FY2012 to FY2021 in `table_cumulative.csv`, which the paper quotes in Section 6.6; and, in `table_corrections.csv`, the figures for FY2010 alone and the rate ratios with both corrections and the under-reporting factor of 2.15.

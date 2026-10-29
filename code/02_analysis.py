@@ -249,7 +249,7 @@ for vname, fix2010, tmode in VARIANTS:
         pv.loc[tc.index, "troops"] = tc
     res = {}
     for label, years in (("surge", [2010, 2011]), ("drawdown", [2012, 2013, 2014]), ("advisory", [2015, 2016, 2017]),
-                         ("all official", list(range(2009, 2018)))):
+                         ("all official", list(range(2009, 2018))), ("FY2010", [2010])):
         s = pv.loc[years]
         dc, dm = s.contractor_deaths_dba.sum(), s.military_deaths.sum()
         pc, pm = s.contractors.astype(float).sum(), s.troops.astype(float).sum()
@@ -263,6 +263,15 @@ for vname, fix2010, tmode in VARIANTS:
     d_mix = logit(b["share_personnel"]) - logit(a["share_personnel"])
     corr.append(dict(variant=vname, period="decomposition surge to advisory", change_log_odds_death_share=d_total,
                      from_force_mix=d_mix, from_relative_risk=d_total - d_mix, pct_from_force_mix=100 * d_mix / d_total))
+# the under-reporting factor of 2.15 (robustness check 5) applied to the counts with both corrections; as in check 5,
+# the rate ratio and its interval are scaled by the factor
+for r in [r for r in corr if r["variant"] == "Both corrections (recount and 2,600 added)"
+          and r["period"] in ("surge", "drawdown", "advisory")]:
+    row = dict(r, variant="Both corrections, contractor deaths x 2.15", contractor_deaths=r["contractor_deaths"] * 2.15)
+    for c in ("rate_contractors", "rate_contractors_lo", "rate_contractors_hi", "rate_ratio", "rate_ratio_lo", "rate_ratio_hi"):
+        row[c] = r[c] * 2.15
+    row["share_deaths"] = row["contractor_deaths"] / (row["contractor_deaths"] + r["military_deaths"])
+    corr.append(row)
 corrections = pd.DataFrame(corr)
 corrections.to_csv(os.path.join(TAB, "table_corrections.csv"), index=False)
 # the main test (H2) with the corrected Afghanistan figures
@@ -278,7 +287,7 @@ for vname, pv in corrected_panels.items():
 pd.DataFrame(cg).to_csv(os.path.join(TAB, "table_corrections_glm.csv"), index=False)
 rob_tab = pd.DataFrame(rob)
 
-# 3. two-year windows (Afghanistan FY2009-FY2016 in pairs, plus FY2017 alone is dropped)
+# 3. two-year windows (Afghanistan FY2009-FY2016 in pairs; FY2017, the year left over, is not used)
 two = []
 for a in range(2009, 2017, 2):
     dc, dm, pc, pm = pooled("Afghanistan", [a, a + 1])
@@ -330,7 +339,7 @@ pd.DataFrame(rows).to_csv(os.path.join(TAB, "table_tcn_correlation.csv"), index=
 
 # ---------- Cumulative totals ----------
 cum = []
-for country, years in (("Afghanistan", range(2009, 2022)), ("Iraq", range(2009, 2022))):
+for country, years in (("Afghanistan", range(2009, 2022)), ("Iraq", range(2009, 2022)), ("Iraq", range(2012, 2022))):
     s = p[(p.country == country) & (p.fiscal_year.isin(years))]
     cum.append(dict(country=country, years=f"FY{min(years)}-FY{max(years)}",
                     military_deaths=int(s.military_deaths.sum()), contractor_deaths_dba=int(s.contractor_deaths_dba.sum()),

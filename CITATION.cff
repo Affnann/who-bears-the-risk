@@ -1,11 +1,14 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite it as below."
+type: software
 title: "who-bears-the-risk: replication package for 'Who Bears the Risk of Privatized War?'"
 authors:
   - family-names: "Azom"
     given-names: "Kazi Affnann"
     orcid: "https://orcid.org/0009-0001-5998-7642"
 repository-code: "https://github.com/Affnann/who-bears-the-risk"
+version: "1.0.0"
+date-released: "2026-10-29"
 license: MIT
 keywords:
   - private military contractors

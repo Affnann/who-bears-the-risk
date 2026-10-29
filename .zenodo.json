@@ -1,7 +1,8 @@
 {
   "title": "who-bears-the-risk: replication package for 'Who Bears the Risk of Privatized War?'",
   "upload_type": "software",
-  "description": "<p>Replication package for Kazi Affnann Azom (2026), \"Who Bears the Risk of Privatized War? Troops, Contractors and Third-Country Nationals.\" The code downloads every input from public sources and rebuilds every table and figure in the paper. The inputs are the Defense Department's quarterly census of contractor personnel in the USCENTCOM area (as compiled in contractor-census v1.0.0), U.S. troop levels from CRS report R44116, approximate troop levels for Afghanistan in FY2018 to FY2020 built from the official figures quoted in CRS report R45122, U.S. military deaths from the Defense Casualty Analysis System (counts only, no names), Defense Base Act death cases from the Department of Labor (as compiled in contractor-injury-claims v1.0.0) and guard-service contracts from USAspending (as compiled in us-guard-spending v1.0.0). The package includes the dated analysis plan, the quarterly and fiscal-year panels, the output tables and figures, and documentation.</p><p>Code: MIT. Derived data and outputs: CC BY 4.0. The inputs keep the terms of their sources.</p>",
+  "version": "v1.0.0",
+  "description": "<p>Replication package for Kazi Affnann Azom (2026), \"Who Bears the Risk of Privatized War? Troops, Contractors and Third-Country Nationals.\" The code downloads the inputs from public sources and rebuilds every table and figure in the paper. The only input that is not downloaded is a hand-built file of approximate U.S. troop levels in Afghanistan for FY2018 to FY2020, kept in the package with the basis of each value. The inputs are the Defense Department's quarterly census of contractor personnel in the USCENTCOM area (as compiled in contractor-census v1.0.0), U.S. troop levels from CRS report R44116, approximate troop levels for Afghanistan in FY2018 to FY2020 built from the official figures quoted in CRS report R45122, U.S. military deaths from the Defense Casualty Analysis System (counts only, no names), Defense Base Act death cases from the Department of Labor (as compiled in contractor-injury-claims v1.0.0) and guard-service contracts from USAspending (as compiled in us-guard-spending v1.0.0). The package includes the dated analysis plan, the quarterly and fiscal-year panels, the output tables and figures, and documentation.</p><p>Code: MIT (see LICENSE). Derived data, outputs and the hand-built troop file: CC BY 4.0 (see LICENSE-DATA). The downloaded inputs keep the terms of their sources.</p>",
   "creators": [
     {
       "name": "Azom, Kazi Affnann",
@@ -20,11 +21,6 @@
     "replication package"
   ],
   "related_identifiers": [
-    {
-      "identifier": "https://github.com/Affnann/who-bears-the-risk",
-      "relation": "isSupplementTo",
-      "scheme": "url"
-    },
     {
       "identifier": "10.5281/zenodo.23736051",
       "relation": "references",
