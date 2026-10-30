@@ -28,6 +28,17 @@ keywords:
   - Afghanistan
   - Iraq
 references:
+  - type: article
+    title: "Who Bears the Risk of Privatized War? Troops, Contractors and Third-Country Nationals"
+    authors:
+      - family-names: "Azom"
+        given-names: "Kazi Affnann"
+        orcid: "https://orcid.org/0009-0001-5998-7642"
+    year: 2026
+    status: preprint
+    publisher:
+      name: "Zenodo"
+    doi: "10.5281/zenodo.23788239"
   - type: data
     title: "contractor-census: U.S. DoD quarterly contractor census for the USCENTCOM area, FY2008-FY2025"
     authors:

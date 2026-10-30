@@ -22,6 +22,12 @@
   ],
   "related_identifiers": [
     {
+      "identifier": "10.5281/zenodo.23788239",
+      "relation": "isSupplementTo",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    },
+    {
       "identifier": "10.5281/zenodo.23736051",
       "relation": "references",
       "scheme": "doi"

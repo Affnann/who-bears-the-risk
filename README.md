@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23780322.svg)](https://doi.org/10.5281/zenodo.23780322)
 
-Replication package for Kazi Affnann Azom (2026), "Who Bears the Risk of Privatized War? Troops, Contractors and Third-Country Nationals."
+Replication package for Kazi Affnann Azom (2026), "Who Bears the Risk of Privatized War? Troops, Contractors and Third-Country Nationals." Preprint, Zenodo. [10.5281/zenodo.23788239](https://doi.org/10.5281/zenodo.23788239)
 
 The code rebuilds every table and figure in the paper from public sources: the Defense Department's quarterly census of contractor personnel in the USCENTCOM area, U.S. troop levels reported to Congress, the Defense Casualty Analysis System's records of military deaths, and the Labor Department's Defense Base Act death cases.
 
@@ -71,5 +71,9 @@ Azom, Kazi Affnann (2026). *who-bears-the-risk: replication package for 'Who Bea
 
 - This version (v1.0.0): [10.5281/zenodo.23780323](https://doi.org/10.5281/zenodo.23780323)
 - All versions (always points to the latest): [10.5281/zenodo.23780322](https://doi.org/10.5281/zenodo.23780322)
+
+To cite the paper:
+
+Azom, Kazi Affnann (2026). *Who Bears the Risk of Privatized War? Troops, Contractors and Third-Country Nationals* [Preprint]. Zenodo. https://doi.org/10.5281/zenodo.23788239
 
 See also `CITATION.cff`.
